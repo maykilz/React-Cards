@@ -1,0 +1,12 @@
+.card-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+
+.container {
+    padding: 0 5%;
+    margin: 0 auto;
+}
