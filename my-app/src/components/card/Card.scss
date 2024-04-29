@@ -26,3 +26,29 @@
 .subtitle {
     display: inline-block;
 }
+.card { 
+    display: flex;
+    flex-direction: column;
+}
+
+.textContent {
+    display: flex;
+    flex-direction: column;
+}
+.card-imageblock {
+    position: relative;
+}
+.card-type  {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    color: #fff;
+    padding: 8px;
+}
+
+.card-blue {
+    background: #006F79;
+}
+.card-orange{
+    background: #EC6608;
+}
