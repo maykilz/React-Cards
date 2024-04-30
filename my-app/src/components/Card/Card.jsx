@@ -1,6 +1,8 @@
 import React from "react";
-import "./Card.scss";
-export const Card = ({ props }) => {
+import "./Card.scss";  
+import { Link, Route, Routes } from 'react-router-dom';   
+
+export const Card = ({ props, setSelectedCards, selectedCard }) => {   
   return (
     <div className={"card"} key={props.id}>
       <div className={'card-imageblock'}>
@@ -10,9 +12,9 @@ export const Card = ({ props }) => {
         className={"image"}
       />
       <div className={`card-type ${props.type == 'IndependentLiving'? 'card-blue': 'card-orange'}`}><span>{props.type}</span></div>
-      </div> 
-      <div className="textContent">
-        <b className={"title"}>{props.title} </b>
+      </div>  
+      <div className="textContent"> 
+      <Link to={`/card/${props.id}`} className={'title'} onClick={() => { setSelectedCards(props.id); }}>{props.title}</Link>
         <i>{props.address}</i>
         <span className={"subtitle"}>
           New Properties for Sale from{" "}
@@ -28,3 +30,4 @@ export const Card = ({ props }) => {
     </div>
   );
 };
+ 
