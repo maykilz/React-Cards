@@ -2,7 +2,7 @@ import React from "react";
 import "./Card.scss";  
 import { Link, Route, Routes } from 'react-router-dom';   
 
-export const Card = ({ props, setSelectedCards, selectedCard }) => {   
+export const Card = ({ props, setSelectedCards, selectedCard }) => {    
   return (
     <div className={"card"} key={props.id}>
       <div className={'card-imageblock'}>

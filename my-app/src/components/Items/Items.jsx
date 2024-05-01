@@ -34,7 +34,7 @@ export const Items = () => {
     <Routes>
       <Route path="/" element={<AllCards search={search} setSearch={setSearch} elementsAjax={elementsAjax} setSelectedCard={setSelectedCard} selectedCard={selectedCard} />}>
       </Route>
-      <Route path="/card/:id" element={<OneCard setSelectedCards={setSelectedCard} selectedCard={selectedCard} elementsAjax={elementsAjax}/>}></Route>
+      <Route path="/card/:id" element={<OneCard setSelectedCards={setSelectedCard} selectedCard={selectedCard} elementsAjax={elementsAjax} setResponseAjax={setResponseAjax} responseAjax={responseAjax}/>}></Route>
     </Routes>
   );
 }; 
