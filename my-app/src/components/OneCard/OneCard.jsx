@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./OneCard.scss";
-import { Link } from "react-router-dom";
+import { Link,useParams } from "react-router-dom";
 export const OneCard = () => {
   const params = useParams();
   const elementId = parseInt(params.id);
@@ -21,10 +21,13 @@ export const OneCard = () => {
         setIsCardLoading(false);
       });
   }, [elementId]); 
+   
   if (isCardLoading) {
     return <div>Загрузка...</div>;
   }
-  return (
+  document.title = OneCardElement.title;
+  return ( 
+    
     <div className={"more-card"}>
       <img
         src={`https://via.placeholder.com/300x150/505050?text=${OneCardElement.title}`}
